@@ -1,0 +1,18 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+    register-with-eureka: true
+    fetch-registry: true
+server:
+  port: 80
+spring:
+  application:
+    name: consumer-fegin-order80
+
+ribbon:
+  ReadTimeout: 5000
+  ConnectionTime: 5000
+logging:
+  level:
+    com.luo.springcloud.service.PaymentFeignService: debug

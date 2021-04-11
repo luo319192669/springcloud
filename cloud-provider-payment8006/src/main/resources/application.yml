@@ -1,0 +1,19 @@
+server:
+  port: 8006
+#通用数据源配置
+spring:
+  application:
+    name: provider-service
+  cloud:
+    consul:
+      host: localhost
+      post: 8500
+      discovery:
+        service-name: ${spring.application.name}
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
